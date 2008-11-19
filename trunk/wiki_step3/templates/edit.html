@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Editing: {{ page_title }}{% endblock %}
+{% block content %}
+    <h1>Editing: {{ page_title }}</h1>
+    <form action="/save/{{ page_title }}" method="POST">
+    	<textarea rows="20" cols="80" name="body" id="body">{{ current_version.revision_body }}</textarea><br/>
+    	<input type="submit" value="Save Changes"/>
+    </form>
+{% endblock %}

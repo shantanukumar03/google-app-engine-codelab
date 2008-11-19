@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+    	{% block header %}
+    	{% if user %}
+    	<div align="right">Logged in as {{ user.nickname }} - 
+          <a href="/edituser/{{ user.email }}">Edit My Profile</a> -
+    	  <a href="{{log_in_out_url}}">Log out</a> </div>
+    	{% else %}
+    	<div align="right"><a href="{{log_in_out_url}}">Log in</a></div>
+    	{% endif %}
+    	{% endblock %}
+		{% block content %}{% endblock %}
+		{% block footer %}
+		<hr/>
+		<a href="/">Return to StartPage</a><br>
+	    <a href="/sendadminemail">Send an Email to the Admins</a>
+		{% endblock %}
+    </body>
+</html>
