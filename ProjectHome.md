@@ -1,0 +1,1 @@
+This project contains a progressive example of developing a Wiki with Google App Engine.
